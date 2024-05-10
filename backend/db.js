@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { boolean } from "zod";
 
-mongoose.connect("mongodb+srv://rutikthak17:Ritik@123@todoapp.bded8ux.mongodb.net/todos")
+mongoose.connect("mongodb+srv://rutikthak17:Ritik%40123@todoapp.bded8ux.mongodb.net/todos");
 
 const todoSchema = mongoose.Schema({
     title: String,
@@ -9,6 +9,5 @@ const todoSchema = mongoose.Schema({
     completed: Boolean
 })
 const todo = mongoose.model('todos', todoSchema);
-module.exports = {
-    todo
-}
+
+export default todo;
