@@ -43,9 +43,10 @@ app.put("/completed",async (req,res)=>{
         })
         return;
     }
-    await todo.updateOne({
-        _id: req.body.id
-    },{
+    await todo.findOneAndUpdate({
+        _id: updatePayload._id
+    },
+    {
         completed: true
     })
 
